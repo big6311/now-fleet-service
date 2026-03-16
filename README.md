@@ -1,84 +1,129 @@
-"use client";
+# Now Fleet Service — Premium Website
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Star, Quote } from "lucide-react";
+A production-quality multi-page website for **Now Fleet Service**, built with:
 
-interface TestimonialCardProps {
-  name: string;
-  title: string;
-  company: string;
-  quote: string;
-  rating?: number;
-  index?: number;
-}
+- **Next.js 14** (App Router)
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS** (custom brand tokens)
+- **Framer Motion** (subtle premium animations)
+- **Lucide React** (icons)
 
-export default function TestimonialCard({
-  name,
-  title,
-  company,
-  quote,
-  rating = 5,
-  index = 0,
-}: TestimonialCardProps) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+## Brand Colors
 
-  const initials = name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .toUpperCase()
-    .slice(0, 2);
+| Token       | Hex       | Usage                            |
+|-------------|-----------|----------------------------------|
+| richblack   | `#0A0A0A` | Hero backgrounds, deep sections  |
+| charcoal    | `#111317` | Main page background             |
+| graphite    | `#1A1F26` | Card backgrounds, accents        |
+| softwhite   | `#F5F5F2` | Primary text                     |
+| muted       | `#B7BCC5` | Secondary text, body copy        |
+| gold        | `#C8A96B` | Primary accent — buttons, icons  |
+| deepgold    | `#A8843E` | Gradient endpoint, hover states  |
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="premium-card p-7 flex flex-col"
-    >
-      {/* Quote icon */}
-      <div className="mb-4">
-        <Quote size={28} className="text-gold/25" fill="rgba(200,169,107,0.08)" />
-      </div>
+## Getting Started
 
-      {/* Stars */}
-      <div className="flex gap-1 mb-4">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star
-            key={i}
-            size={14}
-            className={i < rating ? "text-gold fill-gold" : "text-muted/30"}
-          />
-        ))}
-      </div>
+```bash
+# Install dependencies
+npm install
 
-      {/* Quote */}
-      <p className="text-muted font-body text-sm leading-relaxed flex-1 mb-6 italic">
-        &ldquo;{quote}&rdquo;
-      </p>
+# Start development server
+npm run dev
 
-      {/* Divider */}
-      <div className="divider-gold mb-5"></div>
+# Build for production
+npm run build
+```
 
-      {/* Author */}
-      <div className="flex items-center gap-3">
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center text-richblack font-display font-bold text-sm flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, #C8A96B, #A8843E)" }}
-        >
-          {initials}
-        </div>
-        <div>
-          <p className="text-softwhite font-body font-semibold text-sm">{name}</p>
-          <p className="text-muted/70 font-body text-xs">
-            {title}, {company}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
+Open [http://localhost:3000](http://localhost:3000)
+
+## File Structure
+
+```
+now-fleet-service/
+├── app/
+│   ├── layout.tsx          # Root layout (Navbar + Footer)
+│   ├── page.tsx            # Home page
+│   ├── globals.css         # Global styles + design system
+│   ├── about/page.tsx      # About page
+│   ├── services/page.tsx   # Services page
+│   ├── gallery/page.tsx    # Gallery page
+│   ├── reviews/page.tsx    # Reviews / Testimonials page
+│   ├── faq/page.tsx        # FAQ page
+│   ├── contact/page.tsx    # Contact page
+│   └── quote/page.tsx      # Request a Quote page
+├── components/
+│   ├── Navbar.tsx          # Sticky nav with mobile menu
+│   ├── Footer.tsx          # Full-width footer
+│   ├── PageHero.tsx        # Reusable page header
+│   ├── SectionHeading.tsx  # Animated section headings
+│   ├── CTASection.tsx      # Dark/gold CTA sections
+│   ├── ServiceCard.tsx     # Service feature cards
+│   ├── TestimonialCard.tsx # Review cards
+│   ├── FAQAccordion.tsx    # Animated FAQ accordion
+│   ├── BeforeAfterSlider.tsx # Interactive drag slider
+│   ├── ContactForm.tsx     # Premium contact form
+│   └── GalleryGrid.tsx     # Filterable gallery + lightbox
+└── public/
+    └── logo.png            # ← Place your logo here
+```
+
+## Adding Your Logo
+
+Replace the text placeholder in `components/Navbar.tsx` and `components/Footer.tsx`:
+
+```tsx
+// Current placeholder (Navbar.tsx ~line 55):
+<div className="w-12 h-12 rounded-full ...">
+  <span className="text-gold ...">NFS</span>
+</div>
+
+// Replace with:
+import Image from "next/image";
+<Image src="/logo.png" alt="Now Fleet Service" width={48} height={48} className="rounded-full" />
+```
+
+Do the same in `Footer.tsx`.
+
+## Adding Real Photography
+
+Replace the emoji/gradient placeholders in:
+- `components/GalleryGrid.tsx` — gallery item backgrounds
+- `components/BeforeAfterSlider.tsx` — before/after backgrounds
+- `app/page.tsx` — hero visual card, gallery previews
+
+Use Next.js `<Image>` for all photography:
+
+```tsx
+import Image from "next/image";
+<Image
+  src="/images/fleet-01.jpg"
+  alt="Armored truck fleet cleaning"
+  fill
+  className="object-cover"
+/>
+```
+
+Store images in `/public/images/`.
+
+## Customization
+
+### Contact Information
+Update phone, email, and service area in:
+- `components/Footer.tsx`
+- `app/contact/page.tsx`
+
+### Owner Name
+Replace `[Owner Name]` in `app/about/page.tsx` with the actual owner's name.
+
+### Business Tagline / Copy
+All copy is inline in each page file — easy to search and update.
+
+## Deployment
+
+```bash
+# Vercel (recommended)
+npx vercel
+
+# Or static export
+npm run build
+```
