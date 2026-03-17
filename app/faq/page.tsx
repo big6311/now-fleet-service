@@ -36,7 +36,7 @@ const faqGeneral = [
   {
     question: "What geographic area do you serve?",
     answer:
-      "We currently serve the metro area and surrounding regions. For larger commercial accounts or aviation clients, we may be able to travel to your location depending on fleet size and service scope. Contact us with your location and we'll let you know if we can accommodate your needs.",
+      "We currently serve the Tri-State & Florida. For larger commercial accounts or aviation clients, we may be able to travel to your location depending on fleet size and service scope. Contact us with your location and we'll let you know if we can accommodate your needs.",
   },
 ];
 
