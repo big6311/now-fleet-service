@@ -47,7 +47,8 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  src="/logo.png/image0.png"
+                  src="/image0.png"
+                  unoptimized
                   alt="Now Fleet Services Logo"
                   fill
                   className="object-contain rounded-full"
