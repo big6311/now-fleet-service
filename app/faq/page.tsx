@@ -59,7 +59,7 @@ const faqService = [
   {
     question: "How long does a fleet wash take?",
     answer:
-      "Service time depends on fleet size, vehicle type, and service level. A single vehicle can typically be completed in 30–60 minutes. For fleet accounts, we schedule appropriately to cover your full vehicle count within your operational window. We'll give you a realistic time estimate when setting up your service.",
+      "Service time depends on fleet size, vehicle type, and service level. A single vehicle can typically be completed in 10-20 minutes. For fleet accounts, we schedule appropriately to cover your full vehicle count within your operational window. We'll give you a realistic time estimate when setting up your service.",
   },
   {
     question: "Do I need to be present during the service?",
