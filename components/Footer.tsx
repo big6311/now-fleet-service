@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Mail, MapPin, Shield, Truck, Plane } from "lucide-react";
 
 const services = [
@@ -34,20 +33,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-richblack border-t border-gold/10">
-      {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div className="relative w-12 h-12 flex-shrink-0">
-                <Image
-                  src="/logo.png/logo.png"
-                  alt="Now Fleet Services Logo"
-                  fill
-                  className="object-contain rounded-full"
-                />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Now Fleet Services"
+                width={48}
+                height={48}
+                className="rounded-full object-contain"
+              />
               <div>
                 <div className="text-softwhite font-display font-semibold text-base leading-tight">
                   Now Fleet
@@ -75,7 +71,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-display text-softwhite font-semibold text-base mb-5 relative">
               Quick Links
@@ -96,7 +91,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-display text-softwhite font-semibold text-base mb-5 relative">
               Our Services
@@ -130,7 +124,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="font-display text-softwhite font-semibold text-base mb-5 relative">
               Contact Us
@@ -172,7 +165,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gold/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-muted/60 text-xs font-body">
