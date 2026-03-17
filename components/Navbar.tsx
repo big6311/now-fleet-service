@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
@@ -44,28 +45,22 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                {/* Logo placeholder — replace with <Image src="/logo.png" ... /> */}
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gold/60 group-hover:border-gold transition-colors duration-300"
-                  style={{
-                    background: "linear-gradient(135deg, #1A1F26, #0A0A0A)",
-                  }}
-                >
-                  <span
-                    className="text-gold font-display font-bold text-sm"
-                    style={{ letterSpacing: "0.02em" }}
-                  >
-                    NFS
-                  </span>
-                </div>
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/logo.png/logo.png"
+                  unoptimized
+                  alt="Now Fleet Services Logo"
+                  fill
+                  className="object-contain rounded-full"
+                  priority
+                />
               </div>
               <div>
                 <div className="text-softwhite font-display font-semibold text-base leading-tight tracking-wide">
                   Now Fleet
                 </div>
-                <div className="text-gold text-[10px] font-body font-500 tracking-[0.18em] uppercase">
-                  Service
+                <div className="text-gold text-[10px] font-body tracking-[0.18em] uppercase">
+                  Services
                 </div>
               </div>
             </Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Shield, Truck, Plane } from "lucide-react";
 
 const services = [
@@ -39,23 +40,25 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div
-                className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gold/50"
-                style={{ background: "linear-gradient(135deg, #1A1F26, #0A0A0A)" }}
-              >
-                <span className="text-gold font-display font-bold text-sm">NFS</span>
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/logo.png/logo.png"
+                  alt="Now Fleet Services Logo"
+                  fill
+                  className="object-contain rounded-full"
+                />
               </div>
               <div>
                 <div className="text-softwhite font-display font-semibold text-base leading-tight">
                   Now Fleet
                 </div>
                 <div className="text-gold text-[10px] tracking-[0.18em] uppercase font-body">
-                  Service
+                  Services
                 </div>
               </div>
             </Link>
             <p className="text-muted text-sm font-body leading-relaxed mb-6">
-              Now Fleet Service provides professional exterior cleaning for armored truck fleets,
+              Now Fleet Services provides professional exterior cleaning for armored truck fleets,
               commercial vehicles, and private aircraft with a commitment to precision,
               presentation, and dependable service.
             </p>
@@ -134,36 +137,22 @@ export default function Footer() {
               <span className="gold-line mt-2 block"></span>
             </h3>
             <div className="space-y-4">
-              <a
-                href="tel:+(973) 405 1291"
-                className="flex items-start gap-3 group"
-              >
+              <a href="tel:+19734051291" className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
                   <Phone size={14} className="text-gold" />
                 </div>
                 <div>
-                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">
-                    Phone
-                  </p>
-                  <p className="text-softwhite text-sm group-hover:text-gold transition-colors">
-                    (973) 405 1291
-                  </p>
+                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">Phone</p>
+                  <p className="text-softwhite text-sm group-hover:text-gold transition-colors">(973) 405-1291</p>
                 </div>
               </a>
-              <a
-                href="mailto:nowfleetservicesllc@gmail.com"
-                className="flex items-start gap-3 group"
-              >
+              <a href="mailto:nowfleetservicesllc@gmail.com" className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
                   <Mail size={14} className="text-gold" />
                 </div>
                 <div>
-                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">
-                    Email
-                  </p>
-                  <p className="text-softwhite text-sm group-hover:text-gold transition-colors">
-                    nowfleetservicesllc@gmail.com
-                  </p>
+                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">Email</p>
+                  <p className="text-softwhite text-sm group-hover:text-gold transition-colors">nowfleetservicesllc@gmail.com</p>
                 </div>
               </a>
               <div className="flex items-start gap-3">
@@ -171,19 +160,12 @@ export default function Footer() {
                   <MapPin size={14} className="text-gold" />
                 </div>
                 <div>
-                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">
-                    Service Area
-                  </p>
-                  <p className="text-softwhite text-sm">
-                    Tri-State &amp; Florida
-                  </p>
+                  <p className="text-muted text-xs uppercase tracking-wider font-body mb-0.5">Service Area</p>
+                  <p className="text-softwhite text-sm">Tri-State &amp; Florida</p>
                 </div>
               </div>
             </div>
-            <Link
-              href="/quote"
-              className="btn-gold mt-6 w-full justify-center text-xs"
-            >
+            <Link href="/quote" className="btn-gold mt-6 w-full justify-center text-xs">
               Request a Quote
             </Link>
           </div>
@@ -194,7 +176,7 @@ export default function Footer() {
       <div className="border-t border-gold/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-muted/60 text-xs font-body">
-            © {year} Now Fleet Service. All rights reserved.
+            © {year} Now Fleet Services LLC. All rights reserved.
           </p>
           <p className="text-muted/40 text-xs font-body text-center">
             Premium Fleet & Aircraft Exterior Cleaning Services
