@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Send, CheckCircle2 } from "lucide-react";
 
 const serviceOptions = [
@@ -17,22 +16,33 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/xreyyngg", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
       setSubmitted(true);
-    }, 1200);
+    } else {
+      alert("Something went wrong. Please try again or call us directly.");
+    }
+
+    setLoading(false);
   };
 
   if (submitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="premium-card p-10 text-center"
-      >
+      <div className="premium-card p-10 text-center">
         <CheckCircle2 size={52} className="text-gold mx-auto mb-4" />
         <h3 className="font-display text-2xl font-bold text-softwhite mb-3">
           Message Received
@@ -41,7 +51,7 @@ export default function ContactForm() {
           Thank you for reaching out. We&rsquo;ll review your request and respond
           promptly with the next steps.
         </p>
-      </motion.div>
+      </div>
     );
   }
 
@@ -54,6 +64,7 @@ export default function ContactForm() {
           </label>
           <input
             type="text"
+            name="fullName"
             required
             placeholder="Your full name"
             className="premium-input"
@@ -65,6 +76,7 @@ export default function ContactForm() {
           </label>
           <input
             type="text"
+            name="companyName"
             placeholder="Your company or institution"
             className="premium-input"
           />
@@ -78,6 +90,7 @@ export default function ContactForm() {
           </label>
           <input
             type="email"
+            name="email"
             required
             placeholder="your@email.com"
             className="premium-input"
@@ -89,6 +102,7 @@ export default function ContactForm() {
           </label>
           <input
             type="tel"
+            name="phone"
             placeholder="(555) 000-0000"
             className="premium-input"
           />
@@ -100,7 +114,7 @@ export default function ContactForm() {
           <label className="block text-muted/80 text-xs font-body font-semibold uppercase tracking-wider mb-2">
             Service Needed <span className="text-gold">*</span>
           </label>
-          <select required className="premium-input appearance-none cursor-pointer">
+          <select name="service" required className="premium-input appearance-none cursor-pointer">
             <option value="" className="bg-graphite">
               Select a service
             </option>
@@ -117,6 +131,7 @@ export default function ContactForm() {
           </label>
           <input
             type="text"
+            name="fleetSize"
             placeholder="e.g. 12 armored trucks, Cessna Citation"
             className="premium-input"
           />
@@ -127,7 +142,7 @@ export default function ContactForm() {
         <label className="block text-muted/80 text-xs font-body font-semibold uppercase tracking-wider mb-2">
           Preferred Date / Schedule
         </label>
-        <input type="date" className="premium-input" />
+        <input type="date" name="preferredDate" className="premium-input" />
       </div>
 
       <div>
@@ -136,6 +151,7 @@ export default function ContactForm() {
         </label>
         <textarea
           required
+          name="message"
           rows={5}
           placeholder="Tell us about your service needs and we'll get back to you promptly with the next steps."
           className="premium-input resize-none"
@@ -149,24 +165,9 @@ export default function ContactForm() {
       >
         {loading ? (
           <span className="flex items-center gap-2">
-            <svg
-              className="animate-spin h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8v8z"
-              />
+            <svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
             </svg>
             Sending...
           </span>
