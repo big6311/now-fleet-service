@@ -14,7 +14,7 @@ const contactInfo = [
     icon: Phone,
     label: "Phone",
     value: "(973) 405 1291",
-    sub: "Available Mon–Sat",
+    sub: "Available 24/7",
     href: "tel:+(973) 405 1291",
   },
   {
