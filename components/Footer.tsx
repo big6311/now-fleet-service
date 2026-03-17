@@ -42,7 +42,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  src="/logo.png/image0.png"
+                  src="/image0.png"
                   alt="Now Fleet Services Logo"
                   fill
                   className="object-contain rounded-full"
