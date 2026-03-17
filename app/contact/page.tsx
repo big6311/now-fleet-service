@@ -27,14 +27,14 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Metro Area & Surrounding Regions",
+    value: "Northen New Jersey",
     sub: "On-site fleet service at your facility",
     href: null,
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon–Sat: 6:00 AM – 6:00 PM",
+    value: "Mon–Sat: 6:00 AM – 4:00 PM",
     sub: "Flexible for commercial fleet accounts",
     href: null,
   },
