@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon–Sat: 6:00 AM – 4:00 PM",
+    value: "24/7",
     sub: "Flexible for commercial fleet accounts",
     href: null,
   },
