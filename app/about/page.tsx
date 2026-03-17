@@ -45,11 +45,9 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2021", event: "Founded with a focus on armored truck fleet washing for local banking clients." },
-  { year: "2022", event: "Expanded to serve commercial fleet operators and regional financial institutions." },
-  { year: "2023", event: "Launched private aircraft exterior cleaning services for private aviation clients." },
-  { year: "2024", event: "Established recurring fleet maintenance programs for long-term commercial accounts." },
-  { year: "2025+", event: "Continuing to grow and serve premium clients across the region." },
+  { year: "2024", event: "Founded Now Fleet Services LLC, bringing over 20 years of hands-on fleet maintenance and cleaning experience to every client we serve." },
+  { year: "2025", event: "Expanded service offerings to commercial fleet operators and financial institutions across the Tri-State area and Florida." },
+  { year: "2026", event: "Continuing to grow our client base and expanding into private aircraft exterior cleaning services." },
 ];
 
 export default function AboutPage() {
