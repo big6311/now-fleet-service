@@ -181,7 +181,7 @@ export default function HomePage() {
                   Schedule Service
                   <ArrowRight size={15} />
                 </Link>
-                <a href="tel:+11234567890" className="btn-ghost">
+                <a href="tel:+(973) 405 1291" className="btn-ghost">
                   <Phone size={15} />
                   Call Now
                 </a>
@@ -522,8 +522,8 @@ export default function HomePage() {
         subtitle="Request a custom quote today and find out why fleet managers and aviation clients trust Now Fleet Service for consistent, professional results."
         primaryLabel="Request a Quote"
         primaryHref="/quote"
-        secondaryLabel="(123) 456-7890"
-        secondaryHref="tel:+11234567890"
+        secondaryLabel="(973) 405 1291"
+        secondaryHref="tel:+(973) 405 1291"
       />
     </div>
   );
