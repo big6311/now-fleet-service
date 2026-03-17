@@ -175,7 +175,7 @@ export default function Footer() {
                     Service Area
                   </p>
                   <p className="text-softwhite text-sm">
-                    Northen New Jersey &amp; Surrounding Regions
+                    Tri-State &amp; Florida
                   </p>
                 </div>
               </div>
