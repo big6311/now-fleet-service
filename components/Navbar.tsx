@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
@@ -43,18 +42,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 flex-shrink-0">
-                <Image
-                  src="/logo.png/logo.png"
-                  unoptimized
-                  alt="Now Fleet Services Logo"
-                  fill
-                  className="object-contain rounded-full"
-                  priority
-                />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Now Fleet Services"
+                width={48}
+                height={48}
+                className="rounded-full object-contain"
+              />
               <div>
                 <div className="text-softwhite font-display font-semibold text-base leading-tight tracking-wide">
                   Now Fleet
@@ -65,7 +60,6 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
@@ -82,12 +76,8 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-4">
-              <Link
-                href="/quote"
-                className="hidden lg:inline-flex btn-gold text-xs"
-              >
+              <Link href="/quote" className="hidden lg:inline-flex btn-gold text-xs">
                 Request a Quote
                 <ChevronRight size={14} />
               </Link>
@@ -103,7 +93,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
