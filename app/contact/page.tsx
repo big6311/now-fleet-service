@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Northen New Jersey",
+    value: "Tri-State & Florida",
     sub: "On-site fleet service at your facility",
     href: null,
   },
