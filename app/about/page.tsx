@@ -82,27 +82,13 @@ export default function AboutPage() {
               <span className="gold-line block mb-6"></span>
               <div className="space-y-5 text-muted font-body text-base leading-relaxed">
                 <p>
-                  At Now Fleet Service, our mission is straightforward: deliver
-                  consistent, professional exterior cleaning that keeps your
-                  fleet and aircraft looking exactly how they should — clean,
-                  presentable, and ready for the road or runway.
+                 Our mission at Now Fleet Services is to provide exceptional fleet maintenance 
+                  and cleaning solutions that ensure armored vehicles and private aircraft operate 
+                  safely, efficiently, and reliably. We strive to be a trusted partner to government 
+                  and private organizations by delivering timely service, operational excellence, and 
+                  unmatched attention to detail. 
                 </p>
-                <p>
-                  We got into this business because we saw a gap in the market.
-                  Armored truck fleets, commercial vehicles, and private
-                  aircraft all require specialized care that standard car washes
-                  can&rsquo;t provide. The cleaning products need to be
-                  appropriate, the techniques need to be correct, and the
-                  scheduling needs to work around your operations — not against
-                  them.
-                </p>
-                <p>
-                  We use only professional-grade soaps, precision brushing
-                  methods, and high-pressure rinsing systems designed for
-                  heavy-duty fleet and aviation applications. Every detail
-                  matters — from the roof lines to the undercarriage, from
-                  glass surfaces to door seams.
-                </p>
+    
               </div>
             </div>
 
