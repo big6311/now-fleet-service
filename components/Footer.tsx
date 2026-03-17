@@ -175,7 +175,7 @@ export default function Footer() {
                     Service Area
                   </p>
                   <p className="text-softwhite text-sm">
-                    Metro Area &amp; Surrounding Regions
+                    Northen New Jersey &amp; Surrounding Regions
                   </p>
                 </div>
               </div>
