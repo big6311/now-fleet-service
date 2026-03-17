@@ -13,16 +13,16 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(123) 456-7890",
+    value: "(973) 405 1291",
     sub: "Available Mon–Sat",
-    href: "tel:+11234567890",
+    href: "tel:+(973) 405 1291",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@nowfleetservice.com",
+    value: "nowfleetservicesllc@gmail.com",
     sub: "Typically respond within 24 hours",
-    href: "mailto:info@nowfleetservice.com",
+    href: "mailto:nowfleetservicesllc@gmail.com",
   },
   {
     icon: MapPin,
