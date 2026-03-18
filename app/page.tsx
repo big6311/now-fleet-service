@@ -97,10 +97,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: "200+", label: "Vehicles Serviced" },
-  { value: "98%", label: "Client Retention" },
-  { value: "5★", label: "Average Rating" },
-  { value: "3+", label: "Years Experience" },
+  { value: "3+", label: "Years in Business" },
+  { value: "40+", label: "Weekly Vehicles" },
+  { value: "160+", label: "Monthly Vehicles" },
+  { value: "1,900+", label: "Annual Vehicles" },
 ];
 
 const galleryPreviews = [
