@@ -97,9 +97,9 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: "3+", label: "Years in Business" },
   { value: "40+", label: "Weekly Vehicles" },
   { value: "160+", label: "Monthly Vehicles" },
+  { value: "1,900+", label: "Annual Vehicles" },
   { value: "99%", label: "Client Retention" },
 ];
 
