@@ -60,9 +60,9 @@ const services = [
     eyebrow: "Aviation Service",
     title: "Private Aircraft Exterior Cleaning",
     description:
-      "Premium exterior washing for business jets, turboprops, and private aircraft. We use aviation-safe surface methods that protect aircraft finishes while delivering immaculate presentation results.",
+    "Coming soon — Now Fleet Services is expanding into premium exterior cleaning for private aircraft. Contact us to get on our priority list.",
     longDescription:
-      "Your aircraft represents a significant investment — and its appearance matters to you and your passengers. Our private aircraft exterior cleaning service is tailored to the specific requirements of aviation surfaces: we use aviation-approved cleaning products, non-abrasive techniques, and careful methods that protect paint, seals, and sensitive surfaces. From fuselage cleaning to wing surface detailing, we deliver the kind of presentation quality that reflects the investment you've made.",
+      "Now Fleet Services is actively expanding into private aircraft exterior cleaning. With over 20 years of fleet maintenance experience, we are developing specialized aviation cleaning programs for business jets, turboprops, and private aircraft. If you are interested in being one of our first aviation clients, contact us today to discuss your needs and get priority scheduling when we launch.",
     benefits: [
       "Aviation-safe, non-abrasive cleaning products only",
       "Full fuselage exterior wash and rinse",
