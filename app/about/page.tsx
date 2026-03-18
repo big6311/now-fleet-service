@@ -111,7 +111,7 @@ export default function AboutPage() {
                     Founder & Owner
                   </p>
                   <h3 className="font-display text-xl font-bold text-softwhite mb-2">
-                    [Owner Name]
+                    [Cesar Archila]
                   </h3>
                   <p className="text-muted font-body text-sm leading-relaxed">
                     With years of experience in commercial fleet operations and
